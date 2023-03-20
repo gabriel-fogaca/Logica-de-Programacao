@@ -2,7 +2,7 @@ package entities;
 
 public class Product {
     private String name;
-    private Double price;
+    protected Double price;
     public Product() {
     }
     public Product(String name, Double price) {
@@ -27,7 +27,7 @@ public class Product {
     }
 
     public String priceTag(){
-        return getName() + " $ " + getPrice();
+        return getName() + " $ " + String.format("%.2f", getPrice());
     }
 
 }
